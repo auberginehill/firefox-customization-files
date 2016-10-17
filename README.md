@@ -249,7 +249,7 @@
                                     <tr>
                                         <td style="padding:6px"><strong>Windows 7</strong></td>
                                         <td style="padding:6px"><code>firefox.cfg</code></td>
-                                        <td style="padding:6px"><code>%APPDATA%\Roaming\Mozilla\Firefox\Profiles\\[a_profile_name]\user.js</code></td>
+                                        <td style="padding:6px"><code>%APPDATA%\Roaming\Mozilla\Firefox\Profiles\[a_profile_name]\user.js</code></td>
                                     </tr>
                                     <tr>
                                         <td style="padding:6px"><strong>Linux</strong></td>
@@ -274,7 +274,7 @@
                                     <tr>
                                         <td style="padding:6px"><strong>Windows (portable)</strong></td>
                                         <td style="padding:6px"><code>firefox.cfg</code></td>
-                                        <td style="padding:6px"><code>[firefox_directory]\Data\\[a_profile_name]\user.js</code></td>
+                                        <td style="padding:6px"><code>[firefox_directory]\Data\[a_profile_name]\user.js</code></td>
                                     </tr>
                                 </table>
                             </p>
