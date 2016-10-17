@@ -202,8 +202,8 @@
                             <h4><code>prefs.js</code> (lock file) content:</h4>
                             <p>
                                 <blockquote>
-                                    <code>pref('general.config.filename', 'firefox.cfg');</code></code><br />
-                                    <code>pref('general.config.obscure_value', 0);</code></code>
+                                    <code>pref('general.config.filename', 'firefox.cfg');</code>
+                                    <br /><code>pref('general.config.obscure_value', 0);</code>
                                 </blockquote>
                             </p>
                         </ul>
@@ -285,9 +285,8 @@
                 <p>
                     <li>
                         <h3>Tweaking the settings: Setting the settings settable rather than in a locked state</h3>
-                        <p>In the firefox.cfg file, if the settings are preferred to be still controllable (not locked) on the about:config -page, please change every
+                        <p>In the <a href="https://raw.githubusercontent.com/auberginehill/firefox-customization-files/master/firefox.cfg">firefox.cfg</a> file, if the settings are preferred to be controllable (not locked) on the about:config -page, please change every
                         <ul>
-                            <br />
                             <br /><code>lockPref("</code>
                             <br />
                             <br />to
@@ -324,196 +323,300 @@
     <tr>
         <th></th>
         <td style="padding:6px">
-            <h5>Disable telemetry and health reporting</h5>
-            <p><a href="https://www.mozilla.org/en-US/privacy/firefox/#health-report">Firefox Health Report</a>
-            <br /><a href="https://www.mozilla.org/en-US/privacy/firefox/#telemetry">Telemetry (usage statistics)</a>
-            <br /><a href="https://gecko.readthedocs.io/en/latest/toolkit/components/telemetry/telemetry/internals/preferences.html">Preferences</a></p>
-            <br /><code>lockPref("breakpad.reportURL", "");</code>
-            <br /><code>lockPref("browser.tabs.crashReporting.sendReport", false);</code>
-            <br /><code>lockPref("datareporting.healthreport.documentServerURI", "");</code>
-            <br /><code>lockPref("datareporting.healthreport.service.enabled", false);</code>
-            <br /><code>lockPref("datareporting.healthreport.uploadEnabled", false);</code>
-            <br /><code>lockPref("datareporting.policy.dataSubmissionEnabled", false);</code>
-            <br /><code>lockPref("datareporting.policy.dataSubmissionEnabled.v2", false);</code>
-            <br /><code>lockPref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);</code>
-            <br /><code>lockPref("dom.ipc.plugins.reportCrashURL", false);</code>
-            <br /><code>lockPref("toolkit.telemetry.archive.enabled", false);</code>
-            <br /><code>lockPref("toolkit.telemetry.cachedClientID", "");</code>
-            <br /><code>lockPref("toolkit.telemetry.enabled", false);</code>
-            <br /><code>lockPref("toolkit.telemetry.prompted", 2);</code>
-            <br /><code>lockPref("toolkit.telemetry.rejected", true);</code>
-            <br /><code>lockPref("toolkit.telemetry.server", "");</code>
-            <br /><code>lockPref("toolkit.telemetry.unified", false);</code>
-            <br /><code>lockPref("toolkit.telemetry.unifiedIsOptIn", true);</code>
-            <br /><code>lockPref("toolkit.telemetry.optoutSample", false);</code>
-
-            <h5>Disable sync</h5>
-            <br /><code>lockPref("identity.fxaccounts.auth.uri", "");</code>
-            <br /><code>lockPref("identity.fxaccounts.remote.force_auth.uri", "");</code>
-            <br /><code>lockPref("identity.fxaccounts.remote.signin.uri", "");</code>
-            <br /><code>lockPref("identity.fxaccounts.remote.signup.uri", "");</code>
-            <br /><code>lockPref("identity.fxaccounts.settings.uri", "");</code>
-            <br /><code>lockPref("services.sync.autoconnect", false);</code>
-            <br /><code>lockPref("services.sync.engine.addons", false);</code>
-            <br /><code>lockPref("services.sync.engine.bookmarks", false);</code>
-            <br /><code>lockPref("services.sync.engine.history", false);</code>
-            <br /><code>lockPref("services.sync.engine.passwords", false);</code>
-            <br /><code>lockPref("services.sync.engine.prefs", false);</code>
-            <br /><code>lockPref("services.sync.engine.tabs", false);</code>
-            <br /><code>lockPref("services.sync.serverURL", "");</code>
-
-            <h5>Turn on Do not Track</h5>
-            <br /><code>lockPref("privacy.donottrackheader.enabled", true);</code>
-            <br /><code>lockPref("privacy.donottrackheader.value", 1);</code>
-
-            <h5>Disable features that have an impact on privacy</h5>
-            <p><a href="https://www.mozilla.org/en-US/firefox/geolocation/">Location-Aware Browsing</a></p>    
-            <br /><code>lockPref("accessibility.typeaheadfind", false);</code>
-            <br /><code>lockPref("geo.enabled", false);</code>
-            <br /><code>lockPref("geo.wifi.logging.enabled", false);</code>
-            <br /><code>lockPref("geo.wifi.uri", "");</code>
-            <br /><code>lockPref("layout.spellcheckDefault", 0);</code>
-
-            <h5>Disable certificate warning bypass</h5>
-            <br /><code>lockPref("browser.xul.error_pages.enabled", false);</code>
-
-            <h5>Enable support for Content Security Policy</h5>
-            <br /><code>lockPref("security.csp.enable", true);</code>
-
-            <h5>Disable Safe Browsing anti-malware</h5>
-            <p>Safe Browsing communicates with a third party and leaks the browsing history and also sends metadata about the downloads made.
-            <br /><a href="https://support.mozilla.org/en-US/kb/how-does-phishing-and-malware-protection-work">How does built-in Phishing and Malware Protection work?</a></p>     
-            <br /><code>lockPref("browser.safebrowsing.enabled", false);</code>
-            <br /><code>lockPref("browser.safebrowsing.downloads.enabled", false);</code>
-            <br /><code>lockPref("browser.safebrowsing.malware.enabled", false);</code>
-
-            <h5>Turn on XSS Filter</h5>
-            <br /><code>lockPref("browser.urlbar.filter.javascript", true);</code>
-
-            <h5>Restrict third party cookies</h5>
-            <br /><code>lockPref("network.cookie.cookieBehavior", 1);</code>
-
-            <h5>Enable Flash as it's in a sandbox</h5>
-            <br /><code>lockPref("plugin.state.flash", 2);</code>
-
-            <h5>Disable Java unless required</h5>
-            <br /><code>lockPref("plugin.state.java", 0);</code>
-            <br /><code>lockPref("plugin.state.npdeployjava1", 0);</code>
-
-            <h5>Disable webcam and microphone unless necessary</h5>
-            <br /><code>lockPref("media.navigator.enabled", false);</code>
-            <br /><code>lockPref("media.navigator.video.enabled", false);</code>
-
-            <h5>Disable Firefox Hello</h5>
-            <p>Firefox connects to third-party (Telefonica) servers without asking for permission.
-            <br /><a href="https://support.mozilla.org/en-US/kb/firefox-hello-video-and-voice-conversations-online">Firefox Hello - video and voice conversations online</a></p> 
-            <br /><code>lockPref("loop.enabled", false);</code>
+            <ul>
 
 
-            <h3>Optional configuration</h3>
 
 
-            <h5>Clear personal and temporary data on shutdown</h5>
-            <br /><code>lockPref("privacy.clearOnShutdown.cache", true);</code>
-            <br /><code>lockPref("privacy.clearOnShutdown.cookies", true);</code>
-            <br /><code>lockPref("privacy.clearOnShutdown.downloads", true);</code>
-            <br /><code>lockPref("privacy.clearOnShutdown.formData", true);</code>
-            <br /><code>lockPref("privacy.clearOnShutdown.history", true);</code>
-            <br /><code>lockPref("privacy.clearOnShutdown.offlineApps", true);</code>
-            <br /><code>lockPref("privacy.clearOnShutdown.openWindows", false);</code>
-            <br /><code>lockPref("privacy.clearOnShutdown.passwords", true);</code>
-            <br /><code>lockPref("privacy.clearOnShutdown.sessions", true);</code>
-            <br /><code>lockPref("privacy.clearOnShutdown.siteprefs", true);</code>
-            <br /><code>lockPref("privacy.clearOnShutdown.siteSettings", true);</code>
-            <br /><code>lockPref("privacy.cpd.cache", true);</code>
-            <br /><code>lockPref("privacy.cpd.cookies", true);</code>
-            <br /><code>lockPref("privacy.cpd.downloads", true);</code>
-            <br /><code>lockPref("privacy.cpd.formdata", true);</code>
-            <br /><code>lockPref("privacy.cpd.history", true);</code>
-            <br /><code>lockPref("privacy.cpd.offlineApps", true);</code>
-            <br /><code>lockPref("privacy.cpd.openWindows", false);</code>
-            <br /><code>lockPref("privacy.cpd.passwords", true);</code>
-            <br /><code>lockPref("privacy.cpd.sessions", true);</code>
-            <br /><code>lockPref("privacy.cpd.siteprefs", true);</code>
-            <br /><code>lockPref("privacy.cpd.siteSettings", true);</code>
-            <br /><code>lockPref("privacy.sanitize.sanitizeOnShutdown", true);</code>
 
-            <h5>Prevent the use of SPDY, Websockets and WebRTC if not supported by the web proxy</h5>
-            <br /><a href="https://wiki.mozilla.org/Media/WebRTC">Media/WebRTC</a>
-            <br /><code>lockPref("media.http.spdy.enabled", false);</code>
-            <br /><code>lockPref("media.peerconnection.enabled", false);</code>
-            <br /><code>lockPref("media.websocket.enabled", false);</code>
-            <br /><code>lockPref("network.websocket.enabled", false);</code>
-
-            <h5>Disable automatic form filling</h5>
-            <br /><code>lockPref("signon.autofillForms", false);</code>
-            <br /><code>lockPref("signon.prefillForms", false);</code>
-            <br /><code>lockPref("signon.rememberSignons", false);</code>
-
-            <h5>Disable Pocket integration</h5>
-            <p>A third-party service (proprietary) for managing a reading list of articles.
-            <br />For disabling the Pocket integration, please start by removing the "pocket" icon from the toolbar.
-            <br /><a href="https://support.mozilla.org/en-US/kb/save-web-pages-later-pocket-firefox">Save web pages for later with Pocket for Firefox</a></p> 
-            <br /><code>lockPref("browser.pocket.enabled", false);</code>
-
-            <h5>Expire master password</h5>
-            <br /><code>lockPref("signon.expireMasterPassword", true);</code>
-
-            <h5>Disable the version updated page</h5>
-            <br /><code>lockPref("browser.startup.homepage_override.mstone", "ignore");</code>
-
-            <h5>Disable default browser check</h5>
-            <br /><code>lockPref("browser.shell.checkDefaultBrowser", false);</code>
-
-            <h5>Set disk cache to 1MB</h5>
-            <br /><code>lockPref("browser.cache.disk.capacity", 1024);</code>
-            <br /><code>lockPref("browser.cache.disk.smart_size.enabled", false);</code>
-            <br /><code>lockPref("browser.cache.disk.smart_size.first_run", false);</code>
-            <br /><code>lockPref("browser.cache.disk.smart_size.use_old_max", false);</code>
+                <h4>Disable telemetry and health reporting</h4>
+                <p>
+                    <blockquote>
+                        <code>pref('general.config.filename', 'firefox.cfg');</code>
+                        <br /><code>pref('general.config.obscure_value', 0);</code>
+                    </blockquote>
+                </p>
 
 
-            <h3>Ideas (not enabled nor disabled)</h3>
 
 
-            <h5>Disable updates and notifications</h5>
-            <br /><code>lockPref("app.update.auto", false);</code>
-            <br /><code>lockPref("app.update.autoUpdateEnabled", false);</code>
-            <br /><code>lockPref("app.update.enabled", false);</code>
-            <br /><code>lockPref("app.update.mode", 1);</code>
-            <br /><code>lockPref("app.update.service.enabled", false);</code>
-            <br /><code>lockPref("app.update.silent", true);</code>
-            <br /><code>lockPref("update_notifications.enabled", false);</code>
 
-            <h5>Disable unnecessary protocols</h5>
-            <p>This disables older protocols that are known to be weak or entirely broken (3DES, RC4 and MD5).</p>
-            <br /><code>lockPref("security.ssl3.rsa_rc4_128_sha", false);</code>
-            <br /><code>lockPref("security.ssl3.rsa_rc4_128_md5", false);</code>
-            <br /><code>lockPref("security.ssl3.rsa_des_ede3_sha", false);</code>
-            <br /><code>lockPref("security.ssl3.ecdhe_ecdsa_rc4_128_sha", false);</code>
-            <br /><code>lockPref("security.ssl3.ecdhe_rsa_rc4_128_sha", false);</code>
-            <br /><code>lockPref("app.update.auto", false);</code>
 
-            <h5>Disable device sensors</h5>
-            <br /><code>lockPref("device.sensors.enabled", false);</code>
-            <br /><code>lockPref("camera.control.face_detection.enabled", false);</code>
-            <br /><code>lockPref("camera.control.autofocus_moving_callback.enabled", false);</code>
+                <h4>Disable telemetry and health reporting</h4>
+                <p>
+                    <blockquote>
+                        <a href="https://www.mozilla.org/en-US/privacy/firefox/#health-report">Firefox Health Report</a>
+                        <br /><a href="https://www.mozilla.org/en-US/privacy/firefox/#telemetry">Telemetry (usage statistics)</a>
+                        <br /><a href="https://gecko.readthedocs.io/en/latest/toolkit/components/telemetry/telemetry/internals/preferences.html">Preferences</a>
+                        <br /><code>lockPref("breakpad.reportURL", "");</code>
+                        <br /><code>lockPref("browser.tabs.crashReporting.sendReport", false);</code>
+                        <br /><code>lockPref("datareporting.healthreport.documentServerURI", "");</code>
+                        <br /><code>lockPref("datareporting.healthreport.service.enabled", false);</code>
+                        <br /><code>lockPref("datareporting.healthreport.uploadEnabled", false);</code>
+                        <br /><code>lockPref("datareporting.policy.dataSubmissionEnabled", false);</code>
+                        <br /><code>lockPref("datareporting.policy.dataSubmissionEnabled.v2", false);</code>
+                        <br /><code>lockPref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);</code>
+                        <br /><code>lockPref("dom.ipc.plugins.reportCrashURL", false);</code>
+                        <br /><code>lockPref("toolkit.telemetry.archive.enabled", false);</code>
+                        <br /><code>lockPref("toolkit.telemetry.cachedClientID", "");</code>
+                        <br /><code>lockPref("toolkit.telemetry.enabled", false);</code>
+                        <br /><code>lockPref("toolkit.telemetry.prompted", 2);</code>
+                        <br /><code>lockPref("toolkit.telemetry.rejected", true);</code>
+                        <br /><code>lockPref("toolkit.telemetry.server", "");</code>
+                        <br /><code>lockPref("toolkit.telemetry.unified", false);</code>
+                        <br /><code>lockPref("toolkit.telemetry.unifiedIsOptIn", true);</code>
+                        <br /><code>lockPref("toolkit.telemetry.optoutSample", false);</code>
+                    </blockquote>
+                </p>
+                <h4>Disable sync</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("identity.fxaccounts.auth.uri", "");</code>
+                        <br /><code>lockPref("identity.fxaccounts.remote.force_auth.uri", "");</code>
+                        <br /><code>lockPref("identity.fxaccounts.remote.signin.uri", "");</code>
+                        <br /><code>lockPref("identity.fxaccounts.remote.signup.uri", "");</code>
+                        <br /><code>lockPref("identity.fxaccounts.settings.uri", "");</code>
+                        <br /><code>lockPref("services.sync.autoconnect", false);</code>
+                        <br /><code>lockPref("services.sync.engine.addons", false);</code>
+                        <br /><code>lockPref("services.sync.engine.bookmarks", false);</code>
+                        <br /><code>lockPref("services.sync.engine.history", false);</code>
+                        <br /><code>lockPref("services.sync.engine.passwords", false);</code>
+                        <br /><code>lockPref("services.sync.engine.prefs", false);</code>
+                        <br /><code>lockPref("services.sync.engine.tabs", false);</code>
+                        <br /><code>lockPref("services.sync.serverURL", "");</code>
+                    </blockquote>
+                </p>
+                <h4>Turn on Do not Track</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("privacy.donottrackheader.enabled", true);</code>
+                        <br /><code>lockPref("privacy.donottrackheader.value", 1);</code>
+                    </blockquote>
+                </p>
+                <h4>Disable features that have an impact on privacy</h4>
+                <p>
+                    <blockquote>
+                        <a href="https://www.mozilla.org/en-US/firefox/geolocation/">Location-Aware Browsing</a>
+                        <br /><code>lockPref("accessibility.typeaheadfind", false);</code>
+                        <br /><code>lockPref("geo.enabled", false);</code>
+                        <br /><code>lockPref("geo.wifi.logging.enabled", false);</code>
+                        <br /><code>lockPref("geo.wifi.uri", "");</code>
+                        <br /><code>lockPref("layout.spellcheckDefault", 0);</code>
+                    </blockquote>
+                </p>
+                <h4>Disable certificate warning bypass</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("browser.xul.error_pages.enabled", false);</code>
+                    </blockquote>
+                </p>
+                <h4>Enable support for Content Security Policy</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("security.csp.enable", true);</code>
+                    </blockquote>
+                </p>
+                <h4>Disable Safe Browsing anti-malware</h4>
+                <p>
+                    <blockquote>
+                        Safe Browsing communicates with a third party and leaks the browsing history and also sends metadata about the downloads made.
+                        <br /><a href="https://support.mozilla.org/en-US/kb/how-does-phishing-and-malware-protection-work">How does built-in Phishing and Malware Protection work?</a>
+                        <br /><code>lockPref("browser.safebrowsing.enabled", false);</code>
+                        <br /><code>lockPref("browser.safebrowsing.downloads.enabled", false);</code>
+                        <br /><code>lockPref("browser.safebrowsing.malware.enabled", false);</code>
+                    </blockquote>
+                </p>
+                <h4>Turn on XSS Filter</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("browser.urlbar.filter.javascript", true);</code>
+                    </blockquote>
+                </p>
+                <h4>Restrict third party cookies</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("network.cookie.cookieBehavior", 1);</code>
+                    </blockquote>
+                </p>
 
-            <h5>Disable JavaScript fingerprinting and/or data collection</h5>
-            <br /><code>lockPref("dom.event.clipboardevents.enabled", false);</code>
-            <br /><code>lockPref("dom.battery.enabled", false);</code>
-            <br /><code>lockPref("browser.send_pings", false);</code>
-            <br /><code>lockPref("webgl.disabled", false);</code>
+                <h4>Enable Flash as it's in a sandbox</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("plugin.state.flash", 2);</code>
+                    </blockquote>
+                </p>
+                <h4>Disable Java unless required</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("plugin.state.java", 0);</code>
+                        <br /><code>lockPref("plugin.state.npdeployjava1", 0);</code>
+                    </blockquote>
+                </p>
+                <h4>Disable webcam and microphone unless necessary</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("media.navigator.enabled", false);</code>
+                        <br /><code>lockPref("media.navigator.video.enabled", false);</code>
+                    </blockquote>
+                </p>
+                <h4>Disable Firefox Hello</h4>
+                <p>
+                    <blockquote>
+                        Firefox connects to third-party (Telefonica) servers without asking for permission.
+                        <br /><a href="https://support.mozilla.org/en-US/kb/firefox-hello-video-and-voice-conversations-online">Firefox Hello - video and voice conversations online</a>
+                        <br /><code>lockPref("loop.enabled", false);</code>
+                    </blockquote>
+                </p>
 
-            <h5>Disable search suggestions</h5>
-            <p>By default everything that is typed in the search box is sent to the search engine.
-            <br />If disabled, suggestions based on local history will still work.</p>
-            <br /><code>lockPref("browser.search.suggest.enabled", false);</code>
 
-            <h5>Turn on tracking protection</h5>
-            <p>This makes Firefox block known tracking domains by default.</p>
-            <br /><code>lockPref("privacy.trackingprotection.enabled", true);</code>
+                <h3>Optional configuration</h3>
 
-            <p>For more ideas, please see http://www.ghacks.net/2015/08/18/a-comprehensive-list-of-firefox-privacy-and-security-settings/</p>
+
+                <h4>Clear personal and temporary data on shutdown</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("privacy.clearOnShutdown.cache", true);</code>
+                        <br /><code>lockPref("privacy.clearOnShutdown.cookies", true);</code>
+                        <br /><code>lockPref("privacy.clearOnShutdown.downloads", true);</code>
+                        <br /><code>lockPref("privacy.clearOnShutdown.formData", true);</code>
+                        <br /><code>lockPref("privacy.clearOnShutdown.history", true);</code>
+                        <br /><code>lockPref("privacy.clearOnShutdown.offlineApps", true);</code>
+                        <br /><code>lockPref("privacy.clearOnShutdown.openWindows", false);</code>
+                        <br /><code>lockPref("privacy.clearOnShutdown.passwords", true);</code>
+                        <br /><code>lockPref("privacy.clearOnShutdown.sessions", true);</code>
+                        <br /><code>lockPref("privacy.clearOnShutdown.siteprefs", true);</code>
+                        <br /><code>lockPref("privacy.clearOnShutdown.siteSettings", true);</code>
+                        <br /><code>lockPref("privacy.cpd.cache", true);</code>
+                        <br /><code>lockPref("privacy.cpd.cookies", true);</code>
+                        <br /><code>lockPref("privacy.cpd.downloads", true);</code>
+                        <br /><code>lockPref("privacy.cpd.formdata", true);</code>
+                        <br /><code>lockPref("privacy.cpd.history", true);</code>
+                        <br /><code>lockPref("privacy.cpd.offlineApps", true);</code>
+                        <br /><code>lockPref("privacy.cpd.openWindows", false);</code>
+                        <br /><code>lockPref("privacy.cpd.passwords", true);</code>
+                        <br /><code>lockPref("privacy.cpd.sessions", true);</code>
+                        <br /><code>lockPref("privacy.cpd.siteprefs", true);</code>
+                        <br /><code>lockPref("privacy.cpd.siteSettings", true);</code>
+                        <br /><code>lockPref("privacy.sanitize.sanitizeOnShutdown", true);</code>
+                    </blockquote>
+                </p>
+                <h4>Prevent the use of SPDY, Websockets and WebRTC if not supported by the web proxy</h4>
+                <p>
+                    <blockquote>
+                	    <a href="https://wiki.mozilla.org/Media/WebRTC">Media/WebRTC</a>
+                        <br /><code>lockPref("media.http.spdy.enabled", false);</code>
+                        <br /><code>lockPref("media.peerconnection.enabled", false);</code>
+                        <br /><code>lockPref("media.websocket.enabled", false);</code>
+                        <br /><code>lockPref("network.websocket.enabled", false);</code>
+                    </blockquote>
+                </p>    
+                <h4>Disable automatic form filling</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("signon.autofillForms", false);</code>
+                        <br /><code>lockPref("signon.prefillForms", false);</code>
+                        <br /><code>lockPref("signon.rememberSignons", false);</code>
+                    </blockquote>
+                </p>    
+                <h4>Disable Pocket integration</h4>
+                <p>
+                    <blockquote>
+                        A third-party service (proprietary) for managing a reading list of articles.
+                        <br />For disabling the Pocket integration, please start by removing the "pocket" icon from the toolbar.
+                        <br /><a href="https://support.mozilla.org/en-US/kb/save-web-pages-later-pocket-firefox">Save web pages for later with Pocket for Firefox</a>
+                        <br /><code>lockPref("browser.pocket.enabled", false);</code>
+                    </blockquote>
+                </p>  
+                <h4>Expire master password</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("signon.expireMasterPassword", true);</code>
+                    </blockquote>
+                </p> 
+                <h4>Disable the version updated page</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("browser.startup.homepage_override.mstone", "ignore");</code>
+                    </blockquote>
+                </p>
+                <h4>Disable default browser check</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("browser.shell.checkDefaultBrowser", false);</code>
+                    </blockquote>
+                </p>  
+                <h4>Set disk cache to 1MB</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("browser.cache.disk.capacity", 1024);</code>
+                        <br /><code>lockPref("browser.cache.disk.smart_size.enabled", false);</code>
+                        <br /><code>lockPref("browser.cache.disk.smart_size.first_run", false);</code>
+                        <br /><code>lockPref("browser.cache.disk.smart_size.use_old_max", false);</code>
+                    </blockquote>
+                </p> 
+
+
+                <h3>Ideas (not enabled nor disabled)</h3>
+
+
+                <h4>Disable updates and notifications</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("app.update.auto", false);</code>
+                        <br /><code>lockPref("app.update.autoUpdateEnabled", false);</code>
+                        <br /><code>lockPref("app.update.enabled", false);</code>
+                        <br /><code>lockPref("app.update.mode", 1);</code>
+                        <br /><code>lockPref("app.update.service.enabled", false);</code>
+                        <br /><code>lockPref("app.update.silent", true);</code>
+                        <br /><code>lockPref("update_notifications.enabled", false);</code>
+                    </blockquote>
+                </p>
+                <h4>Disable unnecessary protocols</h4>
+                <p>
+                    <blockquote>
+                        This disables older protocols that are known to be weak or entirely broken (3DES, RC4 and MD5).
+                        <br /><code>lockPref("security.ssl3.rsa_rc4_128_sha", false);</code>
+                        <br /><code>lockPref("security.ssl3.rsa_rc4_128_md5", false);</code>
+                        <br /><code>lockPref("security.ssl3.rsa_des_ede3_sha", false);</code>
+                        <br /><code>lockPref("security.ssl3.ecdhe_ecdsa_rc4_128_sha", false);</code>
+                        <br /><code>lockPref("security.ssl3.ecdhe_rsa_rc4_128_sha", false);</code>
+                        <br /><code>lockPref("app.update.auto", false);</code>
+                    </blockquote>
+                </p>  
+                <h4>Disable device sensors</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("device.sensors.enabled", false);</code>
+                        <br /><code>lockPref("camera.control.face_detection.enabled", false);</code>
+                        <br /><code>lockPref("camera.control.autofocus_moving_callback.enabled", false);</code>
+                    </blockquote>
+                </p> 
+                <h4>Disable JavaScript fingerprinting and/or data collection</h4>
+                <p>
+                    <blockquote>
+                        <code>lockPref("dom.event.clipboardevents.enabled", false);</code>
+                        <br /><code>lockPref("dom.battery.enabled", false);</code>
+                        <br /><code>lockPref("browser.send_pings", false);</code>
+                        <br /><code>lockPref("webgl.disabled", false);</code>
+                    </blockquote>
+                </p> 
+                <h4>Disable search suggestions</h4>
+                <p>
+                    <blockquote>
+                        By default everything that is typed in the search box is sent to the search engine.
+                        <br />If disabled, suggestions based on local history will still work.
+                        <br /><code>lockPref("browser.search.suggest.enabled", false);</code>
+                    </blockquote>
+                </p>   
+                <h4>Turn on tracking protection</h4>
+                <p>
+                    <blockquote>
+                        This makes Firefox block known tracking domains by default.
+                        <br /><code>lockPref("privacy.trackingprotection.enabled", true);</code>
+                    </blockquote>
+                </p>    
+                <p>For more ideas, please see http://www.ghacks.net/2015/08/18/a-comprehensive-list-of-firefox-privacy-and-security-settings/</p>
+            </ul>
         </td>
 </table>
 
@@ -598,7 +701,7 @@
         <td style="padding:6px"><a href="https://github.com/auberginehill/get-ascii-table">Get-AsciiTable</a></td>
     </tr>
     <tr>
-        <th rowspan="11"></th>
+        <th rowspan="12"></th>
         <td style="padding:6px"><a href="https://github.com/auberginehill/get-battery-info">Get-BatteryInfo</a></td>
     </tr>
     <tr>
@@ -627,7 +730,7 @@
     </tr>
     <tr>
         <td style="padding:6px"><a href="https://github.com/auberginehill/rock-paper-scissors">Rock-Paper-Scissors</a></td>
-    </tr>    
+    </tr>
     <tr>
         <td style="padding:6px"><a href="https://github.com/auberginehill/toss-a-coin">Toss-a-Coin</a></td>
     </tr>
