@@ -29,7 +29,7 @@
     <tr>
         <td style="padding:6px"><strong>Description:</strong></td>
         <td style="padding:6px">
-            <p>The deployment of the Firefox Customization File(s) allows to extensively and holistically modify the behaviour of the <strong>Mozilla Firefox</strong> browser. The settings listed below are mainly centered on reinforcing privacy. For a full list of available settings, please, for example, see a fairly <a href="http://www.ghacks.net/2015/08/18/a-comprehensive-list-of-firefox-privacy-and-security-settings/">comprehensive list of Firefox privacy and security settings</a> managed by Martin Brinkmann.</p>
+            <p>The deployment of the Firefox Customization File(s) allows to extensively and holistically modify the behaviour of the <strong>Mozilla Firefox</strong> browser. The settings listed below are mainly centered on reinforcing privacy with a few touches on security, too. For a full list of available settings, please, for example, see a fairly <a href="http://www.ghacks.net/2015/08/18/a-comprehensive-list-of-firefox-privacy-and-security-settings/">comprehensive list of Firefox privacy and security settings</a> managed by Martin Brinkmann.</p>
             <p>This code is partially based on the advice "<a href="https://www.gov.uk/government/publications/browser-security-guidance-mozilla-firefox/browser-security-guidance-mozilla-firefox">Browser Security Guidance: Mozilla Firefox</a>" released by the UK government's National Technical Authority for Information Assurance (<a href="http://www.cesg.gov.uk/">CESG</a>), which is part of the <a href="https://www.gov.uk/government/organisations/government-communications-headquarters">Government Communications Headquarters</a> (in UK).</p></td>
     </tr>
     <tr>
@@ -105,7 +105,7 @@
 
 <table>
     <tr>
-        <th>:triangular_ruler:</th>
+        <th>:book:</th>
         <td style="padding:6px">
             <p>To use this code with Mozilla Firefox, for instance:</p>
         </td>
@@ -315,7 +315,7 @@
 
 <table>
     <tr>
-        <th>:arrow_right:</th>
+        <th>:triangular_ruler:</th>
         <td style="padding:6px">
             <h3>Recommended configuration</h3>
         </td>
