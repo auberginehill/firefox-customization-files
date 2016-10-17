@@ -94,7 +94,7 @@
     </tr>
     <tr>
         <td style="padding:6px"><strong>Downloads:</strong></td>
-        <td style="padding:6px">For instance <a href="https://raw.githubusercontent.com/auberginehill/firefox-customization-files/master/prefs.js">prefs.js</a> and <a href="https://raw.githubusercontent.com/auberginehill/firefox-customization-files/master/firefox.cfg">firefox.cfg</a>. Or <a href="https://github.com/auberginehill/firefox-customization-files/archive/master.zip">everything as a .zip-file</a>.<br />Or by cloning using git: <code>git clone https://github.com/auberginehill/firefox-customization-files/</code></td>
+        <td style="padding:6px">For instance <a href="https://raw.githubusercontent.com/auberginehill/firefox-customization-files/master/prefs.js">prefs.js</a> and <a href="https://raw.githubusercontent.com/auberginehill/firefox-customization-files/master/firefox.cfg">firefox.cfg</a>. Or <a href="https://github.com/auberginehill/firefox-customization-files/archive/master.zip">everything as a .zip-file</a>. Or by cloning using git: <br /><code>git clone https://github.com/auberginehill/firefox-customization-files/</code></td>
     </tr>
 </table>
 
