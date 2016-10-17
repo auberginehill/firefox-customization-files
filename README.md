@@ -94,7 +94,7 @@
     </tr>
     <tr>
         <td style="padding:6px"><strong>Downloads:</strong></td>
-        <td style="padding:6px">For instance <a href="https://raw.githubusercontent.com/auberginehill/firefox-customization-files/master/prefs.js">prefs.js</a> and <a href="https://raw.githubusercontent.com/auberginehill/firefox-customization-files/master/firefox.cfg">firefox.cfg</a>. Or <a href="https://github.com/auberginehill/firefox-customization-files/archive/master.zip">everything as a .zip-file</a>.</td>
+        <td style="padding:6px">For instance <a href="https://raw.githubusercontent.com/auberginehill/firefox-customization-files/master/prefs.js">prefs.js</a> and <a href="https://raw.githubusercontent.com/auberginehill/firefox-customization-files/master/firefox.cfg">firefox.cfg</a>. Or <a href="https://github.com/auberginehill/firefox-customization-files/archive/master.zip">everything as a .zip-file</a>.<br />Or by cloning using git: <code>git clone https://github.com/auberginehill/firefox-customization-files/</code></td>
     </tr>
 </table>
 
@@ -129,22 +129,22 @@
                                         <th style="padding:6px"><strong>Path and file name</strong></th>
                                     </tr>
                                     <tr>
-                                        <td style="padding:6px"><strong>Windows 7</strong></td>
+                                        <td style="padding:6px"><strong>Windows</strong></td>
                                         <td style="padding:6px"><code>prefs.js</code></td>
                                         <td style="padding:6px"><code>%programfiles(x86)%\Mozilla Firefox\defaults\pref\prefs.js</code></td>
                                     </tr>
                                     <tr>
-                                        <td style="padding:6px"><strong>Windows 7</strong></td>
+                                        <td style="padding:6px"><strong>Windows</strong></td>
                                         <td style="padding:6px"><code>firefox.cfg</code></td>
                                         <td style="padding:6px"><code>%programfiles(x86)%\Mozilla Firefox\firefox.cfg</code></td>
                                     </tr>
                                     <tr>
-                                        <td style="padding:6px"><strong>Windows 7</strong></td>
+                                        <td style="padding:6px"><strong>Windows</strong></td>
                                         <td style="padding:6px"><code>prefs.js</code></td>
                                         <td style="padding:6px"><code>C:\Program Files (x86)\Mozilla Firefox\defaults\pref\prefs.js</code></td>
                                     </tr>
                                     <tr>
-                                        <td style="padding:6px"><strong>Windows 7</strong></td>
+                                        <td style="padding:6px"><strong>Windows</strong></td>
                                         <td style="padding:6px"><code>firefox.cfg</code></td>
                                         <td style="padding:6px"><code>C:\Program Files (x86)\Mozilla Firefox\firefox.cfg</code></td>
                                     </tr>
@@ -247,7 +247,7 @@
                                         <th style="padding:6px"><strong>Path and file name</strong></th>
                                     </tr>
                                     <tr>
-                                        <td style="padding:6px"><strong>Windows 7</strong></td>
+                                        <td style="padding:6px"><strong>Windows</strong></td>
                                         <td style="padding:6px"><code>firefox.cfg</code></td>
                                         <td style="padding:6px"><code>%APPDATA%\Roaming\Mozilla\Firefox\Profiles\[a_profile_name]\user.js</code></td>
                                     </tr>
