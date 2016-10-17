@@ -116,7 +116,7 @@
             <ol>
                 <p>
                     <li>
-                        <h3>Recommended configuration</h3>
+                        <h3>Step 1: Recommended configuration</h3>
                         <p>Firefox is configured by using two configuration files (a system-wide installation):</p>
                         <ul>
                             <h4>A system-wide installation</h4>
@@ -211,7 +211,7 @@
                 </p>
                 <p>
                     <li>
-                        <h3>Optional configuration (concerning a single Firefox user profile)</h3>
+                        <h3>Step 2: Optional configuration (concerning a single Firefox user profile)</h3>
                         <p>Alternatively, if a computer-wide installation is not preferred, Firefox can be configured with a single configuration file, where the installation will concern only a single Firefox user profile.</p>
                         <ul>
                             <table>
@@ -284,7 +284,7 @@
                 </p>
                 <p>
                     <li>
-                        <h3>Tweaking the settings: Setting the settings settable rather than in a locked state</h3>
+                        <h3>Step 3: Tweaking the settings: Setting the settings settable rather than in a locked state</h3>
                         <p>In the <a href="https://raw.githubusercontent.com/auberginehill/firefox-customization-files/master/firefox.cfg">firefox.cfg</a> file, if the settings are preferred to be controllable (not locked) on the about:config -page, please change every
                         <ul>
                             <br /><code>lockPref("</code>
@@ -299,7 +299,7 @@
                 </p>
                 <p>
                     <li>
-                        <h3>Additional notes</h3>
+                        <h3>Step 4: Additional notes</h3>
                         <p>For disabling the Pocket integration, please start by removing the "pocket" icon from the toolbar.<p>
                     </li>
                 </p>
