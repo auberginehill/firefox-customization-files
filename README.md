@@ -324,31 +324,13 @@
         <th></th>
         <td style="padding:6px">
             <ul>
-
-
-
-
-
                 <h4>Disable telemetry and health reporting</h4>
                 <p>
-                    <blockquote>
-                        <code>pref('general.config.filename', 'firefox.cfg');</code>
-                        <br /><code>pref('general.config.obscure_value', 0);</code>
-                    </blockquote>
-                </p>
-
-
-
-
-
-
-                <h4>Disable telemetry and health reporting</h4>
-                <p>
-                    <blockquote>
-                        <a href="https://www.mozilla.org/en-US/privacy/firefox/#health-report">Firefox Health Report</a>
-                        <br /><a href="https://www.mozilla.org/en-US/privacy/firefox/#telemetry">Telemetry (usage statistics)</a>
-                        <br /><a href="https://gecko.readthedocs.io/en/latest/toolkit/components/telemetry/telemetry/internals/preferences.html">Preferences</a>
-                        <br /><code>lockPref("breakpad.reportURL", "");</code>
+                    <a href="https://www.mozilla.org/en-US/privacy/firefox/#health-report">Firefox Health Report</a>
+                    <br /><a href="https://www.mozilla.org/en-US/privacy/firefox/#telemetry">Telemetry (usage statistics)</a>
+                    <br /><a href="https://gecko.readthedocs.io/en/latest/toolkit/components/telemetry/telemetry/internals/preferences.html">Preferences</a>
+                    <blockquote>                        
+                        <code>lockPref("breakpad.reportURL", "");</code>
                         <br /><code>lockPref("browser.tabs.crashReporting.sendReport", false);</code>
                         <br /><code>lockPref("datareporting.healthreport.documentServerURI", "");</code>
                         <br /><code>lockPref("datareporting.healthreport.service.enabled", false);</code>
@@ -395,9 +377,9 @@
                 </p>
                 <h4>Disable features that have an impact on privacy</h4>
                 <p>
-                    <blockquote>
-                        <a href="https://www.mozilla.org/en-US/firefox/geolocation/">Location-Aware Browsing</a>
-                        <br /><code>lockPref("accessibility.typeaheadfind", false);</code>
+                    <a href="https://www.mozilla.org/en-US/firefox/geolocation/">Location-Aware Browsing</a>
+                    <blockquote>                        
+                        <code>lockPref("accessibility.typeaheadfind", false);</code>
                         <br /><code>lockPref("geo.enabled", false);</code>
                         <br /><code>lockPref("geo.wifi.logging.enabled", false);</code>
                         <br /><code>lockPref("geo.wifi.uri", "");</code>
@@ -418,10 +400,10 @@
                 </p>
                 <h4>Disable Safe Browsing anti-malware</h4>
                 <p>
+                    Safe Browsing communicates with a third party and leaks the browsing history and also sends metadata about the downloads made.
+                    <br /><a href="https://support.mozilla.org/en-US/kb/how-does-phishing-and-malware-protection-work">How does built-in Phishing and Malware Protection work?</a>                
                     <blockquote>
-                        Safe Browsing communicates with a third party and leaks the browsing history and also sends metadata about the downloads made.
-                        <br /><a href="https://support.mozilla.org/en-US/kb/how-does-phishing-and-malware-protection-work">How does built-in Phishing and Malware Protection work?</a>
-                        <br /><code>lockPref("browser.safebrowsing.enabled", false);</code>
+                        <code>lockPref("browser.safebrowsing.enabled", false);</code>
                         <br /><code>lockPref("browser.safebrowsing.downloads.enabled", false);</code>
                         <br /><code>lockPref("browser.safebrowsing.malware.enabled", false);</code>
                     </blockquote>
@@ -461,15 +443,17 @@
                 </p>
                 <h4>Disable Firefox Hello</h4>
                 <p>
+                    Firefox connects to third-party (Telefonica) servers without asking for permission.
+                    <br /><a href="https://support.mozilla.org/en-US/kb/firefox-hello-video-and-voice-conversations-online">Firefox Hello - video and voice conversations online</a>                
                     <blockquote>
-                        Firefox connects to third-party (Telefonica) servers without asking for permission.
-                        <br /><a href="https://support.mozilla.org/en-US/kb/firefox-hello-video-and-voice-conversations-online">Firefox Hello - video and voice conversations online</a>
-                        <br /><code>lockPref("loop.enabled", false);</code>
+                        <code>lockPref("loop.enabled", false);</code>
                     </blockquote>
                 </p>
 
 
-                <h3>Optional configuration</h3>
+            </ul>
+            <h3>Optional configuration</h3>
+            <ul>
 
 
                 <h4>Clear personal and temporary data on shutdown</h4>
@@ -502,14 +486,14 @@
                 </p>
                 <h4>Prevent the use of SPDY, Websockets and WebRTC if not supported by the web proxy</h4>
                 <p>
+                    <a href="https://wiki.mozilla.org/Media/WebRTC">Media/WebRTC</a>                
                     <blockquote>
-                	    <a href="https://wiki.mozilla.org/Media/WebRTC">Media/WebRTC</a>
-                        <br /><code>lockPref("media.http.spdy.enabled", false);</code>
+                        <code>lockPref("media.http.spdy.enabled", false);</code>
                         <br /><code>lockPref("media.peerconnection.enabled", false);</code>
                         <br /><code>lockPref("media.websocket.enabled", false);</code>
                         <br /><code>lockPref("network.websocket.enabled", false);</code>
                     </blockquote>
-                </p>    
+                </p>
                 <h4>Disable automatic form filling</h4>
                 <p>
                     <blockquote>
@@ -517,22 +501,22 @@
                         <br /><code>lockPref("signon.prefillForms", false);</code>
                         <br /><code>lockPref("signon.rememberSignons", false);</code>
                     </blockquote>
-                </p>    
+                </p>
                 <h4>Disable Pocket integration</h4>
                 <p>
+                    A third-party service (proprietary) for managing a reading list of articles.
+                    <br />For disabling the Pocket integration, please start by removing the "pocket" icon from the toolbar.
+                    <br /><a href="https://support.mozilla.org/en-US/kb/save-web-pages-later-pocket-firefox">Save web pages for later with Pocket for Firefox</a>                
                     <blockquote>
-                        A third-party service (proprietary) for managing a reading list of articles.
-                        <br />For disabling the Pocket integration, please start by removing the "pocket" icon from the toolbar.
-                        <br /><a href="https://support.mozilla.org/en-US/kb/save-web-pages-later-pocket-firefox">Save web pages for later with Pocket for Firefox</a>
-                        <br /><code>lockPref("browser.pocket.enabled", false);</code>
+                        <code>lockPref("browser.pocket.enabled", false);</code>
                     </blockquote>
-                </p>  
+                </p>
                 <h4>Expire master password</h4>
                 <p>
                     <blockquote>
                         <code>lockPref("signon.expireMasterPassword", true);</code>
                     </blockquote>
-                </p> 
+                </p>
                 <h4>Disable the version updated page</h4>
                 <p>
                     <blockquote>
@@ -544,7 +528,7 @@
                     <blockquote>
                         <code>lockPref("browser.shell.checkDefaultBrowser", false);</code>
                     </blockquote>
-                </p>  
+                </p>
                 <h4>Set disk cache to 1MB</h4>
                 <p>
                     <blockquote>
@@ -553,10 +537,12 @@
                         <br /><code>lockPref("browser.cache.disk.smart_size.first_run", false);</code>
                         <br /><code>lockPref("browser.cache.disk.smart_size.use_old_max", false);</code>
                     </blockquote>
-                </p> 
+                </p>
 
 
-                <h3>Ideas (not enabled nor disabled)</h3>
+            </ul>
+            <h3>Ideas (not enabled nor disabled)</h3>
+            <ul>
 
 
                 <h4>Disable updates and notifications</h4>
@@ -573,16 +559,16 @@
                 </p>
                 <h4>Disable unnecessary protocols</h4>
                 <p>
+                    This disables older protocols that are known to be weak or entirely broken (3DES, RC4 and MD5).
                     <blockquote>
-                        This disables older protocols that are known to be weak or entirely broken (3DES, RC4 and MD5).
-                        <br /><code>lockPref("security.ssl3.rsa_rc4_128_sha", false);</code>
+                        <code>lockPref("security.ssl3.rsa_rc4_128_sha", false);</code>
                         <br /><code>lockPref("security.ssl3.rsa_rc4_128_md5", false);</code>
                         <br /><code>lockPref("security.ssl3.rsa_des_ede3_sha", false);</code>
                         <br /><code>lockPref("security.ssl3.ecdhe_ecdsa_rc4_128_sha", false);</code>
                         <br /><code>lockPref("security.ssl3.ecdhe_rsa_rc4_128_sha", false);</code>
                         <br /><code>lockPref("app.update.auto", false);</code>
                     </blockquote>
-                </p>  
+                </p>
                 <h4>Disable device sensors</h4>
                 <p>
                     <blockquote>
@@ -590,7 +576,7 @@
                         <br /><code>lockPref("camera.control.face_detection.enabled", false);</code>
                         <br /><code>lockPref("camera.control.autofocus_moving_callback.enabled", false);</code>
                     </blockquote>
-                </p> 
+                </p>
                 <h4>Disable JavaScript fingerprinting and/or data collection</h4>
                 <p>
                     <blockquote>
@@ -599,24 +585,24 @@
                         <br /><code>lockPref("browser.send_pings", false);</code>
                         <br /><code>lockPref("webgl.disabled", false);</code>
                     </blockquote>
-                </p> 
+                </p>
                 <h4>Disable search suggestions</h4>
                 <p>
+                    By default everything that is typed in the search box is sent to the search engine.
+                    <br />If disabled, suggestions based on local history will still work.
                     <blockquote>
-                        By default everything that is typed in the search box is sent to the search engine.
-                        <br />If disabled, suggestions based on local history will still work.
-                        <br /><code>lockPref("browser.search.suggest.enabled", false);</code>
+                        <code>lockPref("browser.search.suggest.enabled", false);</code>
                     </blockquote>
-                </p>   
+                </p>
                 <h4>Turn on tracking protection</h4>
                 <p>
+                    This makes Firefox block known tracking domains by default.
                     <blockquote>
-                        This makes Firefox block known tracking domains by default.
-                        <br /><code>lockPref("privacy.trackingprotection.enabled", true);</code>
+                        <code>lockPref("privacy.trackingprotection.enabled", true);</code>
                     </blockquote>
-                </p>    
-                <p>For more ideas, please see http://www.ghacks.net/2015/08/18/a-comprehensive-list-of-firefox-privacy-and-security-settings/</p>
+                </p>
             </ul>
+            <p>For more ideas, please see <a href="http://www.ghacks.net/2015/08/18/a-comprehensive-list-of-firefox-privacy-and-security-settings/">A comprehensive list of Firefox privacy and security settings</a></p>
         </td>
 </table>
 
