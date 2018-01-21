@@ -39,7 +39,7 @@
     </tr>
     <tr>
         <td style="padding:6px"><strong>Version:</strong></td>
-        <td style="padding:6px">1.0</td>
+        <td style="padding:6px">1.1</td>
     </tr>
     <tr>
         <td style="padding:6px"><strong>Sources:</strong></td>
@@ -420,7 +420,6 @@
                         <code>lockPref("network.cookie.cookieBehavior", 1);</code>
                     </blockquote>
                 </p>
-
                 <h4>Enable Flash as it's in a sandbox</h4>
                 <p>
                     <blockquote>
@@ -449,13 +448,9 @@
                         <code>lockPref("loop.enabled", false);</code>
                     </blockquote>
                 </p>
-
-
             </ul>
             <h3>Optional configuration</h3>
             <ul>
-
-
                 <h4>Clear personal and temporary data on shutdown</h4>
                 <p>
                     <blockquote>
@@ -506,9 +501,18 @@
                 <p>
                     A third-party service (proprietary) for managing a reading list of articles.
                     <br />For disabling the Pocket integration, please start by removing the "pocket" icon from the toolbar.
-                    <br /><a href="https://support.mozilla.org/en-US/kb/save-web-pages-later-pocket-firefox">Save web pages for later with Pocket for Firefox</a>                
+                    <br /><a href="https://support.mozilla.org/en-US/kb/save-web-pages-later-pocket-firefox">Save web pages for later with Pocket for Firefox</a>
+                    <br /><a href="https://snakerl.blogspot.com/2017/11/pocket-erweiterung-in-firefox-57.html">Pocket-Erweiterung in Firefox 57 deaktivieren</a>     
                     <blockquote>
                         <code>lockPref("browser.pocket.enabled", false);</code>
+                        <br /><code>lockPref("extensions.pocket.enabled", false);</code>
+                    </blockquote>
+                </p>
+                <h4>Disable Firefox's new Screenshot tool (requires at least Firefox 55)</h4>
+                <p>
+                    <a href="https://www.ghacks.net/2017/08/12/how-to-disable-firefoxs-new-screenshot-tool/">How to enable or disable Firefox's new Screenshot tool</a>     
+                    <blockquote>
+                        <code>lockPref("extensions.screenshots.disabled", true);</code>
                     </blockquote>
                 </p>
                 <h4>Expire master password</h4>
@@ -538,13 +542,9 @@
                         <br /><code>lockPref("browser.cache.disk.smart_size.use_old_max", false);</code>
                     </blockquote>
                 </p>
-
-
             </ul>
             <h3>Ideas (not enabled nor disabled)</h3>
             <ul>
-
-
                 <h4>Disable updates and notifications</h4>
                 <p>
                     <blockquote>
